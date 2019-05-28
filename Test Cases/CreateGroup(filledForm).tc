@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateGroup(filledForm)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>601964d0-cd17-4659-9350-c1889925b82c</testCaseGuid>
+   <variable>
+      <defaultValue>'nomeGRUPO'</defaultValue>
+      <description></description>
+      <id>59955389-6f50-4e7e-91ec-b29e530ff045</id>
+      <masked>false</masked>
+      <name>nomeGrupo</name>
+   </variable>
+   <variable>
+      <defaultValue>'descGRUPO'</defaultValue>
+      <description></description>
+      <id>7df72c0a-7438-45ae-b36a-fd3b6b80d008</id>
+      <masked>false</masked>
+      <name>descGrupo</name>
+   </variable>
+</TestCaseEntity>

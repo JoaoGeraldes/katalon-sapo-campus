@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>CreateAndDeleteGroup</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>597c4d31-f270-4fb0-95d0-07803eaeccc1</testCaseGuid>
+   <variable>
+      <defaultValue>'nomeGRUPO'</defaultValue>
+      <description></description>
+      <id>00b481f0-c0bd-487c-9e3d-e80545fff8db</id>
+      <masked>false</masked>
+      <name>nomeGrupo</name>
+   </variable>
+   <variable>
+      <defaultValue>'descGRUPO'</defaultValue>
+      <description></description>
+      <id>e9161dd5-22f9-447d-92e3-527c01108cda</id>
+      <masked>false</masked>
+      <name>descGrupo</name>
+   </variable>
+</TestCaseEntity>
