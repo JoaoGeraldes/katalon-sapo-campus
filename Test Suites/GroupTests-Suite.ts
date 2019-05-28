@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>GroupTests-Suite</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>870eabb8-0452-4cec-88cf-78a4b505a242</testSuiteGuid>
+   <testCaseLink>
+      <guid>e2b1132d-83e8-4cb9-9525-1f9f39b72ab1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CreateGroup(emptyForm)</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d434391f-af92-4836-9f5f-8ef523b3778e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CreateGroup(filledForm)</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>59955389-6f50-4e7e-91ec-b29e530ff045</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>7df72c0a-7438-45ae-b36a-fd3b6b80d008</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cd4498be-8aa1-4b03-9531-6d6875784cdb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CreateAndDeleteGroup</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>00b481f0-c0bd-487c-9e3d-e80545fff8db</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e9161dd5-22f9-447d-92e3-527c01108cda</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>49fdc3a0-d38b-4f18-8fc4-adcda5c90b9b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CreateGroupAndModifyHeader</testCaseId>
+   </testCaseLink>
+</TestSuiteEntity>

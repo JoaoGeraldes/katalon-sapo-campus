@@ -36,9 +36,12 @@ WebUI.openBrowser('https://campus.dev.sapo.pt/bypass/vsilva')
 def driver = DriverFactory.getWebDriver()
 String baseUrl = "https://campus.dev.sapo.pt/bypass/vsilva"
 selenium = new WebDriverBackedSelenium(driver, baseUrl)
-WebUI.delay(5)
+//WebUI.delay(5)
+'Esperar 10 segundos - máximo'
+WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/h4_displayName'), 10)
 selenium.open("https://campus.dev.sapo.pt/s/labs/groups")
-WebUI.delay(4)
+//WebUI.delay(6)
+WebUI.waitForElementClickable(findTestObject('Object Repository/Page_SAPO Campus/modal_GroupCreate'), 10)
 String now = WebUI.executeJavaScript("return Math.round(new Date().getTime() / 1000)", null)
 selenium.click("link=criar")
 selenium.click("name=displayName")
@@ -50,7 +53,10 @@ String displayNameInput = driver.findElement(By.xpath("//*[@id='app']/div/div/di
  
 // Clica no botão "Confirmar" - para criar grupo
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Restrita'])[1]/following::button[1]")
-WebUI.delay(5)
+//WebUI.delay(5)
+WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/h1_groupTitle'), 10)
+WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/btn_groupSettings'), 10)
+
 
 // Mostrar título do grupo
 String groupTitle = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/header/div/div[3]/div/div[1]/div/h1")).getText()
@@ -62,7 +68,8 @@ selenium.click("link=Apagar")
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cancelar'])[2]/following::button[1]")
 
 // Loading
-WebUI.delay(3)
+//WebUI.delay(3)
+WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/btn_searchGroup'), 10)
 
 // Procurar por grupo
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Convites'])[1]/following::button[1]")
