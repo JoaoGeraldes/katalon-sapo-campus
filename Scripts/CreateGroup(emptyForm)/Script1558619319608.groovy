@@ -54,6 +54,5 @@ driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[2]/div[2]/div/div
 //Home button
 //driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/header/div/div[2]/div[1]/nav/a[1]"))
  
-
 //WebUI.closeBrowser();
 

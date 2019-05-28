@@ -32,8 +32,6 @@ import org.openqa.selenium.Keys
 import org.openqa.selenium.WebElement
 
 
-
-
 WebUI.openBrowser('https://campus.dev.sapo.pt/bypass/vsilva')
 def driver = DriverFactory.getWebDriver()
 String baseUrl = "https://campus.dev.sapo.pt/bypass/vsilva"

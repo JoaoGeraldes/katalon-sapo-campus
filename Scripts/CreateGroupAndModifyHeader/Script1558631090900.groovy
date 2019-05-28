@@ -62,6 +62,7 @@ selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Guar
 //WebElement UploadImg = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/header/div/div[1]/div[3]/div/div[2]/div/div/button"));
 //UploadImg.sendKeys("C:\\Utilizadores\\Jow\\Imagens\\225-1200x225.jpg");
 
+
 //WebUI.closeBrowser();
 
 

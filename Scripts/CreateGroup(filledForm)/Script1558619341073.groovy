@@ -60,6 +60,5 @@ if (displayNameInput != h1_groupTitle) {
 	println("Grupo submetido: "+h1_groupTitle);
 }
 
-
 //WebUI.closeBrowser();
 
