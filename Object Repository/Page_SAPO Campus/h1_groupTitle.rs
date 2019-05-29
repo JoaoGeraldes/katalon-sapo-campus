@@ -9,6 +9,14 @@
          <key>XPATH</key>
          <value>//div[@id='app']/div/div/div[2]/div/header/div/div[3]/div/div/div/h1</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//h1[(text() = 'dsd' or . = 'dsd')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
