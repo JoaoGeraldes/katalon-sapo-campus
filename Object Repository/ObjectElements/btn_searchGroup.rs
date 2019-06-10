@@ -6,18 +6,18 @@
    <elementGuidId>0b5a5601-a865-440f-ac15-262cca230cde</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>id(&quot;app&quot;)/div[1]/div[@class=&quot;c c--campus c--u-groups-own person--logged-true c--contexts-true&quot;]/div[2]/div[@class=&quot;c-wrapper row&quot;]/main[@class=&quot;c-main column small-12 large-8&quot;]/div[@class=&quot;main&quot;]/div[@class=&quot;m-header clearfix&quot;]/div[@class=&quot;m-header__bottom&quot;]/div[@class=&quot;float-right&quot;]/div[@class=&quot;main__options has-flyout&quot;]/button[@class=&quot;button button--icon fa fa-search&quot;]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//div[@id='app']/div/div/div[2]/div/main/div/div/div[2]/div[2]/div/button</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;app&quot;)/div[1]/div[@class=&quot;c c--campus c--u-groups-own person--logged-true c--contexts-true&quot;]/div[2]/div[@class=&quot;c-wrapper row&quot;]/main[@class=&quot;c-main column small-12 large-8&quot;]/div[@class=&quot;main&quot;]/div[@class=&quot;m-header clearfix&quot;]/div[@class=&quot;m-header__bottom&quot;]/div[@class=&quot;float-right&quot;]/div[@class=&quot;main__options has-flyout&quot;]/button[@class=&quot;button button--icon fa fa-search&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

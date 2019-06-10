@@ -7,13 +7,17 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//article[@id='5ceda9e9f81e0d584d8b4568']/div/div/div/div/h4</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id=&quot;app&quot;]/div/div/div[2]/div[1]/header/div/div[3]/div/div[1]/div/h1</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -27,18 +31,18 @@
       <value>author-card__displayName</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>Vasco Silva</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;5ceda9e9f81e0d584d8b4568&quot;)/div[@class=&quot;activity-item__wrapper undefined clearfix&quot;]/div[@class=&quot;activity__header&quot;]/div[@class=&quot;author-card author-card--medium&quot;]/div[@class=&quot;author-card__wrapper&quot;]/h4[@class=&quot;author-card__displayName&quot;]</value>
+      <value>//*[@id=&quot;app&quot;]/div/div/div[2]/div[1]/header/div/div[3]/div/div[1]/div/h1</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

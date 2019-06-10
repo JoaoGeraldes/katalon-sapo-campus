@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>modal_GroupCreate</name>
+   <name>userImageAvatar</name>
    <tag></tag>
-   <elementGuidId>5ffede4d-6640-45c0-9963-fffff1e3d08e</elementGuidId>
+   <elementGuidId>4ece3488-6dad-4506-88e5-4f5374287c70</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='app']/div/div/div[2]/div[2]/div[2]/div</value>
+         <value>//section[@id='publish-section']/header/div/a/span/div/img</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -17,55 +17,62 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>img</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>modal__wrapper</value>
+      <value>avatar avatar--personlogged-true</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>src</name>
       <type>Main</type>
-      <value>Criar GrupolabssapoNomeDescriçãoPrivacidadeGrupo abertoGrupo fechadoAdesãoLivreRestritaConfirmarCancelar×</value>
+      <value>//thumbs.web.sapo.io/?pic=https://static-content.campus.dev.sapo.pt/person/mj/655q5rksrkfxneu504bq.jpeg&amp;hash=8e718e619473c06f6f890c5ffbe071b5&amp;W=50&amp;H=50&amp;ar=true&amp;delay_optim=1&amp;png=1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>srcset</name>
+      <type>Main</type>
+      <value>//thumbs.web.sapo.io/?pic=https://static-content.campus.dev.sapo.pt/person/mj/655q5rksrkfxneu504bq.jpeg&amp;hash=8e718e619473c06f6f890c5ffbe071b5&amp;W=50&amp;H=50&amp;ar=true&amp;delay_optim=1&amp;png=1, //thumbs.web.sapo.io/?pic=https://static-content.campus.dev.sapo.pt/person/mj/655q5rksrkfxneu504bq.jpeg&amp;hash=8e718e619473c06f6f890c5ffbe071b5&amp;W=100&amp;H=100&amp;ar=true&amp;delay_optim=1&amp;png=1 2x</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[1]/div[@class=&quot;c c--campus c--newsfeed person--logged-true c--contexts-true&quot;]/div[2]/div[2]/div[@class=&quot;modal-group-create modal&quot;]/div[@class=&quot;modal__wrapper&quot;]</value>
+      <value>id(&quot;publish-section&quot;)/header[@class=&quot;publish__header undefined publish-step-1&quot;]/div[@class=&quot;publish__header-wrapper&quot;]/a[1]/span[1]/div[@class=&quot;avatar-wrapper&quot;]/img[@class=&quot;avatar avatar--personlogged-true&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='app']/div/div/div[2]/div[2]/div[2]/div</value>
+      <value>//section[@id='publish-section']/header/div/a/span/div/img</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Termos da plataforma'])[1]/following::div[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Onde queres publicar?'])[1]/preceding::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Cookies'])[1]/following::div[4]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='×'])[1]/preceding::img[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div[2]/div[2]/div</value>
+      <value>//span/div/img</value>
    </webElementXpaths>
 </WebElementEntity>

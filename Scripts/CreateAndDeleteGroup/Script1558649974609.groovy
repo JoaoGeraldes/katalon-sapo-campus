@@ -36,50 +36,75 @@ WebUI.openBrowser('https://campus.dev.sapo.pt/bypass/vsilva')
 def driver = DriverFactory.getWebDriver()
 String baseUrl = "https://campus.dev.sapo.pt/bypass/vsilva"
 selenium = new WebDriverBackedSelenium(driver, baseUrl)
-//WebUI.delay(5)
-'Esperar 10 segundos - máximo'
-WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/h4_displayName'), 10)
-selenium.open("https://campus.dev.sapo.pt/s/labs/groups")
-//WebUI.delay(6)
-WebUI.waitForElementClickable(findTestObject('Object Repository/Page_SAPO Campus/modal_GroupCreate'), 10)
-String now = WebUI.executeJavaScript("return Math.round(new Date().getTime() / 1000)", null)
-selenium.click("link=criar")
-selenium.click("name=displayName")
-selenium.type("name=displayName", "NOME-"+now)
-selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Descrição'])[1]/textarea[1]")
-selenium.type("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Nome'])[1]/following::textarea[1]", "DESC-"+now)
-String displayNameInput = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[2]/div[2]/div/div[2]/div/form/div[1]/div/label/input")).getAttribute("value")
 
+//////////////////////////
+////// CRIAR GRUPO //////
+//////////////////////////
+
+// Verifica a existência da imagem de avatar do user - se está na página newsfeed (autenticado)
+WebUI.verifyElementVisible(findTestObject('ObjectElements/userImageAvatar'))
+selenium.open("https://campus.dev.sapo.pt/s/labs/groups")
+String now = WebUI.executeJavaScript("return Math.round(new Date().getTime() / 1000)", null)
+
+//Link 'Criar' na página GRUPOS
+//selenium.click("link=criar")
+WebUI.verifyElementVisible(findTestObject('ObjectElements/modal_GroupCreate'))
+selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='criar'])[1]/i[1]")
+
+
+
+
+//Nome do grupo no formulário do modal
+selenium.click("xpath=(.//*[@id='app']/div/div/div[2]/div[2]/div[2]/div/div[2]/div/form/div[1]/div/label/input)")
+
+//Insere nome do grupo
+selenium.type("name=displayName", "NOME-"+now)
+
+//Seleciona o campo da descrição do grupo
+selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Descrição'])[1]/textarea[1]")
+
+//Insere a descrição do grupo
+selenium.type("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Nome'])[1]/following::textarea[1]", "DESC-"+now)
+
+//Gravar o nome do grupo numa variável
+String displayNameInput = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[2]/div[2]/div/div[2]/div/form/div[1]/div/label/input")).getAttribute("value")
  
 // Clica no botão "Confirmar" - para criar grupo
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Restrita'])[1]/following::button[1]")
-//WebUI.delay(5)
-WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/h1_groupTitle'), 10)
-WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/btn_groupSettings'), 10)
 
+
+//////////////////////////
+////// APAGAR GRUPO //////
+//////////////////////////
+
+// Espera pelo título do grupo
+WebUI.verifyElementVisible(findTestObject('ObjectElements/h1_groupTitle'))
+// Espera botão (roda dentada - canto superior direito) settings do grupo
+WebUI.verifyElementVisible(findTestObject('ObjectElements/btn_groupSettings'))
 
 // Mostrar título do grupo
 String groupTitle = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/header/div/div[3]/div/div[1]/div/h1")).getText()
 println(groupTitle);
 
-// Apagar grupo
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Guardar'])[1]/following::span[5]")
 selenium.click("link=Apagar")
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cancelar'])[2]/following::button[1]")
 
 // Loading
 //WebUI.delay(3)
-WebUI.waitForElementClickable(findTestObject('Page_SAPO Campus/btn_searchGroup'), 10)
+//WebUI.waitForElementClickable(findTestObject('ObjectElements/btn_searchGroup'), 10)
 
-// Procurar por grupo
+//Procura elemento para procura de grupos
+WebUI.verifyElementVisible(findTestObject('ObjectElements/btn_searchGroup'))
+
+// Clicla no searchbar
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Convites'])[1]/following::button[1]")
+// Escreve nome do grupo
 selenium.type("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Convites'])[1]/following::input[1]", groupTitle)
+// Submete com um press ENTER/RETURN
 WebElement searchGroup = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/main/div/div[2]/div/div[1]/form/input"));
 searchGroup.sendKeys(Keys.RETURN);
 
-// Grupo existe
-//WebElement element = driver.findElements(By.cssSelector("[class='context-card__meta-content']")).size()
-//println(element)
-
-//WebUI.closeBrowser();
+// Fecha browser
+WebUI.closeBrowser();
 
