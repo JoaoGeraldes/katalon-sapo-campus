@@ -41,16 +41,24 @@ selenium = new WebDriverBackedSelenium(driver, baseUrl)
 ////// CRIAR GRUPO //////
 //////////////////////////
 
+
+def espera(elemento){
+	int maxWaitTime = 20;
+	assert WebUI.waitForElementClickable(findTestObject(elemento), maxWaitTime, FailureHandling.STOP_ON_FAILURE)
+}
+
 // Verifica a existência da imagem de avatar do user - se está na página newsfeed (autenticado)
-WebUI.verifyElementVisible(findTestObject('ObjectElements/userImageAvatar'))
+espera('ObjectElements/userImageAvatar')
+//WebUI.waitForElementVisible(findTestObject('ObjectElements/userImageAvatar'), 20)
+//assert WebUI.verifyElementVisible(findTestObject('ObjectElements/userImageAvatar')) == true
 selenium.open("https://campus.dev.sapo.pt/s/labs/groups")
 String now = WebUI.executeJavaScript("return Math.round(new Date().getTime() / 1000)", null)
 
 //Link 'Criar' na página GRUPOS
 //selenium.click("link=criar")
-WebUI.verifyElementVisible(findTestObject('ObjectElements/modal_GroupCreate'))
+//WebUI.verifyElementVisible(findTestObject('ObjectElements/modal_GroupCreate'))
+espera('ObjectElements/modal_GroupCreate')
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='criar'])[1]/i[1]")
-
 
 
 
@@ -78,9 +86,12 @@ selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Rest
 //////////////////////////
 
 // Espera pelo título do grupo
-WebUI.verifyElementVisible(findTestObject('ObjectElements/h1_groupTitle'))
+//WebUI.verifyElementVisible(findTestObject('ObjectElements/h1_groupTitle'))
+espera('ObjectElements/h1_groupTitle')
+
 // Espera botão (roda dentada - canto superior direito) settings do grupo
-WebUI.verifyElementVisible(findTestObject('ObjectElements/btn_groupSettings'))
+//ebUI.verifyElementVisible(findTestObject('ObjectElements/btn_groupSettings'))
+espera('ObjectElements/btn_groupSettings')
 
 // Mostrar título do grupo
 String groupTitle = driver.findElement(By.xpath("//*[@id='app']/div/div/div[2]/div[1]/header/div/div[3]/div/div[1]/div/h1")).getText()
@@ -90,12 +101,9 @@ selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Guar
 selenium.click("link=Apagar")
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Cancelar'])[2]/following::button[1]")
 
-// Loading
-//WebUI.delay(3)
-//WebUI.waitForElementClickable(findTestObject('ObjectElements/btn_searchGroup'), 10)
-
 //Procura elemento para procura de grupos
-WebUI.verifyElementVisible(findTestObject('ObjectElements/btn_searchGroup'))
+//WebUI.verifyElementVisible(findTestObject('ObjectElements/btn_searchGroup'))
+espera('ObjectElements/btn_searchGroup')
 
 // Clicla no searchbar
 selenium.click("xpath=(.//*[normalize-space(text()) and normalize-space(.)='Convites'])[1]/following::button[1]")
@@ -106,5 +114,5 @@ WebElement searchGroup = driver.findElement(By.xpath("//*[@id='app']/div/div/div
 searchGroup.sendKeys(Keys.RETURN);
 
 // Fecha browser
-WebUI.closeBrowser();
+//WebUI.closeBrowser();
 
